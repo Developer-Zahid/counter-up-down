@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Up & Down</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="circle">
+            <svg class="circle__progressbar" width="300" height="300" viewBox="0 0 318 318" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="150" cy="150" r="150" class="circle__progressbar__progress"></circle>
+                <circle cx="150" cy="150" r="150" class="circle__progressbar__progress" data-circle="progress" id="progress"></circle>
+            </svg>
+            <div class="circle__inner">
+                <p class="circle__inner__text circle__inner__text--gray">Balance <span class="text-warning"><i class="fa-regular fa-circle-question"></i></span></p>
+                <h1 class="circle__inner__title">1.0021</h1>
+                <p class="circle__inner__text circle__inner__text--success">+.24 BEE/hr</p>
+                <p class="circle__inner__text">
+                    <i class="fa-solid fa-user"></i>
+                    <span>1/1</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="header__icon">
+            <i class="fa-solid fa-bug"></i>
+        </div>
+    </header>
+    <div class="timer">
+        <i class="fa-regular fa-clock"></i>
+        <span class="counter"
+            data-start-hours="23"
+            data-start-minutes="0"
+            data-start-seconds="0"
+            data-timer-end-message="Data timer end"
+        >
+            <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+        </span>
+    </div>
+</body>
+</html>
