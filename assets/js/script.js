@@ -34,12 +34,10 @@ const countup = setInterval(() => {
   const elapsedTime = now - startDate;
 
   
-  // Calculate countup hours, minutes, and seconds
-  const countupHours = Math.floor(elapsedTime / (60 * 60 * 1000));
-  const countupMinutes = Math.floor((elapsedTime % (60 * 60 * 1000)) / (60 * 1000));
-  const countupSeconds = Math.floor((elapsedTime % (60 * 1000)) / 1000);
+  // Calculate seconds
+  const countupSeconds = Math.floor(elapsedTime / 1000);
 
-  progressbarElement.style.strokeDashoffset = progressbarTotalLength - (progressbarTotalLength * countupHours) / 24;
+  progressbarElement.style.strokeDashoffset = progressbarTotalLength - (progressbarTotalLength * countupSeconds) / (24 * 60 * 60);
 
   // Stop the countup after 24 hours
   if (elapsedTime >= 24 * 60 * 60 * 1000) {
